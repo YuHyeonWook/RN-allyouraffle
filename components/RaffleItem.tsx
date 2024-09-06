@@ -2,7 +2,9 @@ import { styles } from '@/styles/RaffleItem.styles';
 import React from 'react';
 import { View, Text, Image } from 'react-native';
 
-type RaffleItemProps = {
+const RaffleItem = ({
+  raffleItem,
+}: {
   raffleItem: {
     id: number;
     item: {
@@ -13,9 +15,7 @@ type RaffleItemProps = {
     currentCount: number;
     totalCount: number;
   };
-};
-
-const RaffleItem = ({ raffleItem }: RaffleItemProps) => {
+}) => {
   const percentage = (raffleItem.currentCount / raffleItem.totalCount) * 100;
 
   return (

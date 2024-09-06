@@ -1,9 +1,10 @@
 import { getPopularRaffleItems } from '@/api/raffleApi';
 import RaffleItem from '@/components/RaffleItem';
 import React, { useEffect, useState } from 'react';
-import { SafeAreaView, ScrollView, StyleSheet, View } from 'react-native';
+import { ScrollView, StyleSheet, View } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
-type RaffleItem = {
+export type RaffleItem = {
   id: number;
   item: {
     imageUrl: string;
@@ -40,7 +41,6 @@ export default HomeScreen;
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: 16,
     padding: 40,
   },
 });
